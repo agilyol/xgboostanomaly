@@ -11,7 +11,7 @@ from sklearn import tree
 from sklearn.ensemble import RandomForestClassifier
 
 
-class KubAnomalyExtension():
+class AnomalyDetectionModels():
 
     def __init__(self, paths, name):
         self.train_X = []
@@ -138,6 +138,6 @@ if __name__ == '__main__':
     complex_data_path = "<path to complex dataset>"
     data_sets = {'simple': simple_data_path, 'complex': complex_data_path}
     for name, data in data_sets.items():
-        kube_anomaly_simple = KubAnomalyExtension(data, name)
-        kube_anomaly_simple.run()
+        anomaly_detection = AnomalyDetectionModels(data, name)
+        anomaly_detection.run()
 
