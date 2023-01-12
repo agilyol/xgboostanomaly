@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_curve, accuracy_score, auc
-from data_sets_path import simple_data_path, complex_data_path
 from utils import *
 from sklearn import tree
 from sklearn.ensemble import RandomForestClassifier
@@ -135,8 +134,10 @@ class KubAnomalyExtension():
 
 
 if __name__ == '__main__':
+    simple_data_path = "<path to simple dataset>"
+    complex_data_path = "<path to complex dataset>"
     data_sets = {'simple': simple_data_path, 'complex': complex_data_path}
     for name, data in data_sets.items():
-        kube_anomaly_simple = KubAnomalyModelsExtension(data, name)
+        kube_anomaly_simple = KubAnomalyExtension(data, name)
         kube_anomaly_simple.run()
 
