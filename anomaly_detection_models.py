@@ -49,7 +49,7 @@ class AnomalyDetectionModels():
         auc_value = list(self.final.values())
         x_pos = np.arange(len(model_name))
         fig, ax = plt.subplots(figsize=(6,4))
-        ax.bar(x_pos, auc_value,align='center', alpha=0.7,color=['turquoise', 'r', 'orange','green','brown','blue','pink'], capsize=10)
+        ax.bar(x_pos, auc_value,align='center', alpha=0.7,color=['#1984c5', '#ffb55a', '#7eb0d5','#beb9db', '#e14b31', '#76c68f'], capsize=10)
         ax.set_xticks(x_pos)
         ax.set_xticklabels(model_name)
         ax.yaxis.grid(False)
